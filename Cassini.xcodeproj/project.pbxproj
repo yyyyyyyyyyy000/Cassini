@@ -12,6 +12,8 @@
 		B516FC0121F5AE8D0001BCB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B516FBFF21F5AE8D0001BCB7 /* Main.storyboard */; };
 		B516FC0321F5AE8E0001BCB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B516FC0221F5AE8E0001BCB7 /* Assets.xcassets */; };
 		B516FC0621F5AE8E0001BCB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B516FC0421F5AE8E0001BCB7 /* LaunchScreen.storyboard */; };
+		B516FC0E21F5B2FD0001BCB7 /* DemoUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B516FC0D21F5B2FD0001BCB7 /* DemoUrl.swift */; };
+		B516FC1021F5B79A0001BCB7 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B516FC0F21F5B79A0001BCB7 /* 1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		B516FC0221F5AE8E0001BCB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B516FC0521F5AE8E0001BCB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B516FC0721F5AE8E0001BCB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B516FC0D21F5B2FD0001BCB7 /* DemoUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUrl.swift; sourceTree = "<group>"; };
+		B516FC0F21F5B79A0001BCB7 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +61,10 @@
 				B516FBFB21F5AE8D0001BCB7 /* AppDelegate.swift */,
 				B516FBFD21F5AE8D0001BCB7 /* ViewController.swift */,
 				B516FBFF21F5AE8D0001BCB7 /* Main.storyboard */,
+				B516FC0D21F5B2FD0001BCB7 /* DemoUrl.swift */,
 				B516FC0221F5AE8E0001BCB7 /* Assets.xcassets */,
 				B516FC0421F5AE8E0001BCB7 /* LaunchScreen.storyboard */,
+				B516FC0F21F5B79A0001BCB7 /* 1.jpg */,
 				B516FC0721F5AE8E0001BCB7 /* Info.plist */,
 			);
 			path = Cassini;
@@ -123,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B516FC0621F5AE8E0001BCB7 /* LaunchScreen.storyboard in Resources */,
+				B516FC1021F5B79A0001BCB7 /* 1.jpg in Resources */,
 				B516FC0321F5AE8E0001BCB7 /* Assets.xcassets in Resources */,
 				B516FC0121F5AE8D0001BCB7 /* Main.storyboard in Resources */,
 			);
@@ -136,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B516FBFE21F5AE8D0001BCB7 /* ViewController.swift in Sources */,
+				B516FC0E21F5B2FD0001BCB7 /* DemoUrl.swift in Sources */,
 				B516FBFC21F5AE8D0001BCB7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
