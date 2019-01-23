@@ -8,18 +8,42 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController ,UIScrollViewDelegate{
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageview
+    }
+    
+    @IBOutlet weak var scrollview: UIScrollView!{
+        didSet{
+            scrollview.maximumZoomScale = 25
+            scrollview.minimumZoomScale = 1/25
+            scrollview.addSubview(imageview)
+           scrollview.delegate = self
+        }
+    }
     
     
+    var imageview = UIImageView()
     
-    @IBOutlet weak var imageview: UIImageView!
+    private var image:UIImage?{
+        get{
+            return imageview.image
+        }
+        set{
+            imageview.image = newValue
+            imageview.sizeToFit()
+            scrollview?.contentSize = imageview.frame.size
+        }
+    }
     
     var imageUrl:URL?{
         didSet{
-            imageview.image = nil
-            if imageview.window != nil {
+            image = nil
+           if imageview.window != nil{
                 fetchimage()
             }
+            
         }
     }
     
@@ -27,18 +51,23 @@ class ViewController: UIViewController {
     
     private func fetchimage(){
         if let url = imageUrl{
-            let dat = try? Data(contentsOf: url)
-            if let data = dat{
-                imageview.image = UIImage(data: data)
+            DispatchQueue.global().async {[weak self] in
+                let dat = try? Data(contentsOf: url)
+                DispatchQueue.main.async {
+                    if let data = dat,self?.imageUrl == url{
+                        self?.image = UIImage(data: data)
+                    }
+                }
             }
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if imageview == nil {
+        if imageview.image == nil {
             fetchimage()
         }
+       
     }
     override func viewDidLoad(){
         super.viewDidLoad()
